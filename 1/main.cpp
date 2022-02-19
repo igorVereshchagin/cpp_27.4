@@ -1,7 +1,10 @@
 #include <iostream>
+#include "SpriteVillage.h"
 
 int main()
 {
-  std::cout << "Hello, World!" << std::endl;
+  SpriteVillage *village = new SpriteVillage();
+  village->populate();
+  delete village;
   return 0;
 }
