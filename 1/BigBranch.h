@@ -1,13 +1,15 @@
 #pragma once
 #include "Branch.h"
-#include "SpriteHouse.h"
-#include "SpriteVillage.h"
+#include "ElfHouse.h"
+#include "ElfVillage.h"
 
 class BigBranch
 {
   int branchesCount = 0;
   class Branch **branches = nullptr;
-  class SpriteHouse * spriteHouse = nullptr;
+  class ElfHouse * elfHouse = nullptr;
 public:
-  BigBranch(class SpriteVillage *currentVillage, const int count);
+  BigBranch(class ElfVillage *currentVillage, const int count);
+  bool searchByName(const std::string &inName);
+  int getTotalElves();
 };

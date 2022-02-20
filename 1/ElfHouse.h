@@ -5,13 +5,13 @@
 #pragma once
 #include <string>
 
-class SpriteHouse
+class ElfHouse
 {
   int number = 0;
   bool isOwned = false;
   std::string ownerName = "";
 public:
-  SpriteHouse(const int inNumber);
+  ElfHouse(const int inNumber);
   void populate(const std::string &inName);
   bool getOwner(std::string &outName)
   {
@@ -20,6 +20,7 @@ public:
     return isOwned;
   }
   int getNumber() {return number;}
+  bool getOwned() {return isOwned;}
 };
 
 

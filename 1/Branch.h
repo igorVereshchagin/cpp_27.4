@@ -1,10 +1,12 @@
 #pragma once
-#include "SpriteHouse.h"
-#include "SpriteVillage.h"
+#include "ElfHouse.h"
+#include "ElfVillage.h"
 
 class Branch
 {
-  class SpriteHouse *spriteHouse = nullptr;
+  class ElfHouse *elfHouse = nullptr;
 public:
-  Branch(class SpriteVillage *currentVillage);
+  Branch(class ElfVillage *currentVillage);
+  bool searchByName(const std::string &inName);
+  int getTotalElves();
 };

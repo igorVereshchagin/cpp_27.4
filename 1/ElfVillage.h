@@ -5,19 +5,20 @@
 #pragma once
 #include "Tree.h"
 #include <vector>
-#include "SpriteHouse.h"
+#include "ElfHouse.h"
 
-#define NUMBER_OF_TREES_IN_VILLAGE      2
+#define NUMBER_OF_TREES_IN_VILLAGE      5
 
-class SpriteVillage
+class ElfVillage
 {
   class Tree* trees[NUMBER_OF_TREES_IN_VILLAGE];
-  std::vector<SpriteHouse*> houses;
+  std::vector<ElfHouse*> houses;
 public:
-  SpriteVillage();
+  ElfVillage();
   void populate();
-  void addHouse(SpriteHouse *inHouse);
+  void addHouse(ElfHouse *inHouse);
   int getNumberOfHouses() {return houses.size();}
+  void searchByName();
 };
 
 

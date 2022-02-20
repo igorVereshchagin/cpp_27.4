@@ -2,15 +2,15 @@
 // Created by Igor on 19.02.2022.
 //
 
-#include "SpriteHouse.h"
+#include "ElfHouse.h"
 #include <cassert>
 
-SpriteHouse::SpriteHouse(const int inNumber): number(inNumber)
+ElfHouse::ElfHouse(const int inNumber): number(inNumber)
 {
   assert(inNumber > 0);
 }
 
-void SpriteHouse::populate(const std::string &inName)
+void ElfHouse::populate(const std::string &inName)
 {
   ownerName = inName;
   isOwned = true;

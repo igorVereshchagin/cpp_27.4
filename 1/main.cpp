@@ -1,10 +1,11 @@
 #include <iostream>
-#include "SpriteVillage.h"
+#include "ElfVillage.h"
 
 int main()
 {
-  SpriteVillage *village = new SpriteVillage();
+  ElfVillage *village = new ElfVillage();
   village->populate();
+  village->searchByName();
   delete village;
   return 0;
 }
