@@ -16,6 +16,7 @@ Tree::Tree(ElfVillage *currentVillage, const int inBigBranchesCount): bigBranche
 
 BigBranch* Tree::searchByName(const std::string &inName)
 {
+  assert(this != nullptr);
   BigBranch *ret = nullptr;
   for (int i = 0; i < bigBranchesCount; i++)
   {

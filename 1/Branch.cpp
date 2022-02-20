@@ -3,6 +3,7 @@
 //
 
 #include "Branch.h"
+#include <cassert>
 
 Branch::Branch(class ElfVillage *currentVillage)
 {
@@ -12,6 +13,7 @@ Branch::Branch(class ElfVillage *currentVillage)
 
 bool Branch::searchByName(const std::string &inName)
 {
+  assert(this != nullptr);
   std::string name;
   if (!elfHouse->getOwner(name))
     return false;
@@ -22,6 +24,7 @@ bool Branch::searchByName(const std::string &inName)
 
 int Branch::getTotalElves()
 {
+  assert(this != nullptr);
   if (elfHouse->getOwned())
     return 1;
   return 0;

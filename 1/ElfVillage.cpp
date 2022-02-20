@@ -28,6 +28,7 @@ void ElfVillage::addHouse(ElfHouse *inHouse)
 
 void ElfVillage::populate()
 {
+  assert(this != nullptr);
   for (std::vector<ElfHouse*>::iterator it = houses.begin(); it != houses.end(); it++)
   {
     std::cout << "Populating house " << (*it)->getNumber() << ", input owner name: "<< std::endl;
@@ -45,6 +46,7 @@ void ElfVillage::populate()
 
 void ElfVillage::searchByName()
 {
+  assert(this != nullptr);
   std::cout << "Input name: " << std::endl;
   std::string name;
   std::cin >> std::ws;

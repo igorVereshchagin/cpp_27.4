@@ -13,6 +13,7 @@ BigBranch::BigBranch(ElfVillage *currentVillage, const int inBranchesCount): bra
 
 bool BigBranch::searchByName(const std::string &inName)
 {
+  assert(this != nullptr);
   bool found = false;
   std::string name;
   if (elfHouse->getOwner(name))
@@ -31,6 +32,7 @@ bool BigBranch::searchByName(const std::string &inName)
 
 int BigBranch::getTotalElves()
 {
+  assert(this != nullptr);
   int total = 0;
   if (elfHouse->getOwned())
     total++;

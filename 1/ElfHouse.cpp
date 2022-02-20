@@ -12,6 +12,7 @@ ElfHouse::ElfHouse(const int inNumber): number(inNumber)
 
 void ElfHouse::populate(const std::string &inName)
 {
+  assert(this != nullptr);
   ownerName = inName;
   isOwned = true;
 }
