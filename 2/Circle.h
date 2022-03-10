@@ -13,7 +13,7 @@ class Circle : public Shape
 public:
   Circle() : Shape() , radius(1) {}
   Circle(const double &inRadius) : Shape() , radius(inRadius) {}
-  double square()
+  double area()
   {
     return 4.0 * atan(1.0) * radius * radius;
   }
